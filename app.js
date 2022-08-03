@@ -25,8 +25,8 @@ getAdvice = () => {
             // const adviceID = data.slip.id;
             const quote = data.quote.body;
             const adviceID = data.quote.id;
-            document.querySelector(".num").innerHTML = adviceID;
-            document.querySelector("p").innerHTML = '"' + quote + '"';
+            document.querySelector(".advice-num").innerHTML = adviceID;
+            document.querySelector(".quote").innerHTML = '"' + quote + '"';
         })
         .catch((err) => {
             console.error('Error:', err);

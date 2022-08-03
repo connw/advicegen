@@ -11,7 +11,7 @@ body {
 }
 
 body,
-section,
+main,
 .dice {
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@ body {
     font-size: 16px;
 }
 
-section {
+main {
     background-color: #313A48;
     border-radius: 1rem;
     margin: 4rem 0;
@@ -33,13 +33,14 @@ section {
     text-align: center;
 }
 
-h1 {
+.advice-header {
     color: #53FFAA;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     letter-spacing: 0.2rem;
+    text-transform: uppercase;
 }
 
-p {
+.quote {
     color: #CEE3E9;
     font-size: 1.5rem;
 }
@@ -63,7 +64,7 @@ p {
 
 /* Mobile 767px-down*/
 @media screen and (max-width: 767px) {
-    section {
+    main {
         gap: 2rem;
         padding: 3rem 1rem;
         width: 80%;
@@ -72,7 +73,7 @@ p {
 
 /* Tablet 768px - 1023*/
 @media screen and (min-width: 767px) and (max-width: 1023px) {
-    section {
+    main {
         gap: 3rem;
         padding: 3rem 2rem;
         width: 60%;
@@ -81,7 +82,7 @@ p {
 
 /* Desktop 1024-up */
 @media screen and (min-width: 1023px) {
-    section {
+    main {
         gap: 4rem;
         padding: 4rem 3rem;
         width: 40%;
