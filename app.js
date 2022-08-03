@@ -1,4 +1,12 @@
-displayDivider = () => {
+window.onload = () => {
+    displayDivider();
+    getAdvice();
+}
+
+window.addEventListener("resize", displayDivider);
+document.querySelector("button").addEventListener("click", getAdvice);
+
+function displayDivider() {
     const dividerDesktop = document.querySelector(".divider.desktop");
     const dividerMobile = document.querySelector(".divider.mobile");
 
@@ -8,12 +16,10 @@ displayDivider = () => {
     } else {
         dividerMobile.classList.add("invisible");
         dividerDesktop.classList.remove("invisible");
-    };
+    }
 }
-displayDivider();
-window.addEventListener("resize", displayDivider);
 
-getAdvice = () => {
+function getAdvice() {
     // const url = "https://api.adviceslip.com/advice";
     const url = "https://favqs.com/api/qotd";
 
@@ -30,9 +36,7 @@ getAdvice = () => {
         })
         .catch((err) => {
             console.error('Error:', err);
-        });
+        })
 }
-getAdvice();
-document.querySelector(".dice").addEventListener("click", getAdvice);
 
 
