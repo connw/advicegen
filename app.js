@@ -26,7 +26,7 @@ function getAdvice() {
     fetch(url)
         .then(res => res.json())
         .then(data => {
-            // For original APL https://api.adviceslip.com/advice
+            // For original API https://api.adviceslip.com/advice
             // const quote = data.slip.advice;
             // const adviceID = data.slip.id;
             const quote = data.quote.body;
